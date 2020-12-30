@@ -1,0 +1,18 @@
+body {
+  height: 100vh;
+}
+
+.main-container {
+  position: relative;
+}
+
+#navbarToggleExternalContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#non-collapse {
+  top: 0;
+  left: 0;
+}
