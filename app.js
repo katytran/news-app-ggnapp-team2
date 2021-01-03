@@ -1,10 +1,19 @@
-let urlEndpoint =
-  "https://newsapi.org/v2/top-headlines?country=us&apiKey=1e34783b3b774ec5bdea26967ca444f0";
+const key = "eea74ab76b1a4d13b0822b68e8f136de";
 let newsArticles = [];
 
 async function update() {
-  let response = await fetch(urlEndpoint);
+  // var url =
+  //   "http://newsapi.org/v2/top-headlines?" +
+  //   "country=us&" +
+  //   "apiKey=eea74ab76b1a4d13b0822b68e8f136de";
+  // var req = new Request(url);
+  // fetch(req).then(function (response) {
+  //   console.log(response.json());
+  // });
+  var url = `http://newsapi.org/v2/top-headlines?country=us&apiKey=${key}`;
+  let response = await fetch(url);
   let data = await response.json();
+  console.log(data);
   newsArticles = data.articles;
   render();
 }
