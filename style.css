@@ -17,6 +17,16 @@ body {
   left: 0;
 }
 
+.notification {
+  background-color: #f8d7da;
+  display: none;
+  height: 5vh;
+}
+
+/* .container {
+  width: 30vw !important;
+} */
+
 #view-more {
   margin-bottom: 20px;
 }
