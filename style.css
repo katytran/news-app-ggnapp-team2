@@ -16,3 +16,13 @@ body {
   top: 0;
   left: 0;
 }
+
+.notification {
+  background-color: #f8d7da;
+  display: none;
+  height: 5vh;
+}
+
+/* .container {
+  width: 30vw !important;
+} */

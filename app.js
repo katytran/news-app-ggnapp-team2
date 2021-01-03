@@ -1,5 +1,5 @@
 let urlEndpoint =
-  'https://newsapi.org/v2/top-headlines?country=us&apiKey=1e34783b3b774ec5bdea26967ca444f0';
+  "https://newsapi.org/v2/top-headlines?country=us&apiKey=1e34783b3b774ec5bdea26967ca444f0";
 let newsArticles = [];
 
 async function update() {
@@ -10,7 +10,7 @@ async function update() {
 }
 
 function renderArticleCard(article) {
-   let timeAgo= moment(article.publishedAt).fromNow();
+  let timeAgo = moment(article.publishedAt).fromNow();
   return `
     <div class="card mb-3 mt-5">
       <img src="${article.urlToImage}" class="card-img-top" alt="...">
@@ -21,30 +21,28 @@ function renderArticleCard(article) {
       </div>
     </div>
   `;
- }
+}
 
 function render() {
-  let resultsArea = document.getElementById('results');
+  let resultsArea = document.getElementById("results");
   resultsArea.innerHTML = newsArticles
     .map((article) => renderArticleCard(article))
-    .join('');
-  
+    .join("");
 }
 
 function topHeadlinesClicked() {
-  console.log('Top headlines');
+  console.log("Top headlines");
   urlEndpoint =
-    'https://newsapi.org/v2/top-headlines?country=us&apiKey=1e34783b3b774ec5bdea26967ca444f0';
+    "https://newsapi.org/v2/top-headlines?country=us&apiKey=1e34783b3b774ec5bdea26967ca444f0";
   update();
 }
 
 function everythingClicked() {
-  console.log('Everything');
+  console.log("Everything");
 
   urlEndpoint =
-    'https://newsapi.org/v2/everything?q=bitcoin&apiKey=1e34783b3b774ec5bdea26967ca444f0';
+    "https://newsapi.org/v2/everything?q=bitcoin&apiKey=1e34783b3b774ec5bdea26967ca444f0";
   update();
 }
 
 update();
-
