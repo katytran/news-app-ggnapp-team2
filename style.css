@@ -26,3 +26,7 @@ body {
 /* .container {
   width: 30vw !important;
 } */
+
+#view-more {
+  margin-bottom: 20px;
+}

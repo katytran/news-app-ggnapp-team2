@@ -10,30 +10,44 @@
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-light bg-light border">
       <div class="container-fluid">
-        <button
-          class="navbar-toggler show"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarToggleExternalContent"
-          aria-controls="navbarToggleExternalContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="d-flex align-items-center">
+          <button
+            class="navbar-toggler show"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-dark navbar-toggler-icon"></span>
+          </button>
+          <div class="ms-4">
+            <img
+              src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg"
+              alt=""
+            />
+            News
+          </div>
+        </div>
+
         <form class="d-flex">
           <input
+            id="input"
             class="form-control me-2"
             type="search"
             placeholder="Search"
             aria-label="Search"
           />
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button id="inputBtn" class="btn btn-outline-success" type="submit">
+            Search
+          </button>
         </form>
       </div>
     </nav>
@@ -51,21 +65,33 @@
             </li>
             <li class="nav-item dropdown">
               <a
-                class="nav-link active"
-                aria-current="page"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
                 href="#"
-                onclick="topHeadlinesClicked()"
+                role="button"
+                aria-expanded="false"
                 >Top Headlines</a
               >
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="#"
-                onclick="everythingClicked()"
-                >Everything</a
+              <ul
+                class="dropdown-menu"
+                id="top-headlines-dropdown"
+                onclick="topHeadlinesClicked(event)"
               >
+                <li><a class="dropdown-item" href="#">Business</a></li>
+                <li><a class="dropdown-item" href="#">Entertainment</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Health</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Science</a></li>
+                <li><a class="dropdown-item" href="#">Sports</a></li>
+                <li><a class="dropdown-item" href="#">Technology</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">General</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <hr />
             </li>
           </ul>
         </div>
