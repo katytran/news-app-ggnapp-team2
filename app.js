@@ -20,10 +20,10 @@ inputBtn.addEventListener("click", (e) => {
 async function update(type) {
   if (type === "everything") {
     console.log(keyword);
-    fullURL = `${everythingUrlEndpoint}?q=${keyword}&page=${page}&apiKey=1e34783b3b774ec5bdea26967ca444f0`;
+    fullURL = `${everythingUrlEndpoint}?q=${keyword}&page=${page}&apiKey=eea74ab76b1a4d13b0822b68e8f136de`;
   } else {
     console.log("get to else");
-    fullURL = `${topHeadlines.url}?category=${topHeadlines.category}&page=${page}&country=${topHeadlines.country}&apiKey=1e34783b3b774ec5bdea26967ca444f0`;
+    fullURL = `${topHeadlines.url}?category=${topHeadlines.category}&page=${page}&country=${topHeadlines.country}&apiKey=eea74ab76b1a4d13b0822b68e8f136de`
   }
   let response = await fetch(fullURL);
   let data = await response.json();
